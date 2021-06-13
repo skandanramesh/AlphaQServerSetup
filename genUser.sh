@@ -1,8 +1,14 @@
 #! /usr/bin/bash
 
-groupadd secondyears
-groupadd thirdyears
-groupadd fourthyears
+groupadd secondyearsysAds
+groupadd thirdyearsysAds
+groupadd fourthyearsysAds
+groupadd secondyearwebDevs
+groupadd thirdyearwebDevs
+groupadd fourthyearwebDevs
+groupadd secondyearappDevs
+groupadd thirdyearappDevs
+groupadd fourthyearappDevs
 for i in {01..30} 
 do
 	if [ "$i" -lt 11 ]
