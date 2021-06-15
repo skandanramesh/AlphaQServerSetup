@@ -16,7 +16,7 @@ do
 		useradd -m -g secondyearsysAds sysAd_$i
 	elif [ "$i" -lt 21 ]
 	then
-		useradd -m -g thirdyearsysAds syasAd_$i
+		useradd -m -g thirdyearsysAds sysAd_$i
 	else
 		useradd -m -g fourthyearsysAds sysAd_$i
 	fi
