@@ -7,10 +7,10 @@ do
 		chmod go-rx /home/sysAd_$i
 		setfacl -m g:thirdyearsysAds:r-x /home/sysAd_$i
 		setfacl -m g:fourthyearsysAds:r-x /home/sysAd_$i
-		chmod go-rx home/appDev_$i
+		chmod go-rx /home/appDev_$i
 		setfacl -m g:thirdyearappDevs:r-x /home/appDev_$i
 		setfacl -m g:fourthyearappDevs:r-x /home/appDev_$i
-		chmod go-rx home/webDev_$i
+		chmod go-rx /home/webDev_$i
 		setfacl -m g:thirdyearwebDevs:r-x /home/webDev_$i
 		setfacl -m g:fourthyearwebDevs:r-x /home/webDev_$i
 		setfacl -m u:Jay_Jay:r-x /home/sysAd_$i
