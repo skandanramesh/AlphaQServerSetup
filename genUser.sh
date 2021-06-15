@@ -20,7 +20,7 @@ do
 	else
 		useradd -m -g fourthyearsysAds sysAd_$i
 	fi
-	echo password$i | passwd --stdin user$i
+	echo password$i | chpasswd
 done
 for i in {01..30} 
 do
@@ -33,7 +33,7 @@ do
 	else
 		useradd -m -g fourthyearappDevs appDev_$i
 	fi
-	echo password$i | passwd --stdin user$i
+	echo password$i | passwd chpasswd
 done
 for i in {01..30} 
 do
@@ -46,8 +46,8 @@ do
 	else
 		useradd -m -g fourthyearwebDevs webDev_$i
 	fi
-	echo password$i | passwd --stdin user$i
+	echo password$i | chpasswd
 done
 useradd -m Jay_Jay
-echo password | passwd --stdin user$i
+echo password | chpasswd
 
