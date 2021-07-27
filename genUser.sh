@@ -1,53 +1,52 @@
 #! /usr/bin/bash
 
-groupadd secondyearsysAds
-groupadd thirdyearsysAds
-groupadd fourthyearsysAds
-groupadd secondyearwebDevs
-groupadd thirdyearwebDevs
-groupadd fourthyearwebDevs
-groupadd secondyearappDevs
-groupadd thirdyearappDevs
-groupadd fourthyearappDevs
+sudo groupadd secondyearsysAds
+sudo groupadd thirdyearsysAds
+sudo groupadd fourthyearsysAds
+sudo groupadd secondyearwebDevs
+sudo groupadd thirdyearwebDevs
+sudo groupadd fourthyearwebDevs
+sudo groupadd secondyearappDevs
+sudo groupadd thirdyearappDevs
+sudo groupadd fourthyearappDevs
 for i in {01..30} 
 do
 	if [ "$i" -lt 11 ]
 	then
-		useradd -m -g secondyearsysAds sysAd_$i
+		sudo useradd -m -g secondyearsysAds sysAd_$i
 	elif [ "$i" -lt 21 ]
 	then
-		useradd -m -g thirdyearsysAds sysAd_$i
+		sudo useradd -m -g thirdyearsysAds sysAd_$i
 	else
-		useradd -m -g fourthyearsysAds sysAd_$i
+		sudo useradd -m -g fourthyearsysAds sysAd_$i
 	fi
-	echo password$i | chpasswd
+	echo sysAd_$i:password$i | sudo chpasswd
 done
 for i in {01..30} 
 do
 	if [ "$i" -lt 11 ]
 	then
-		useradd -m -g secondyearappDevs appDev_$i
+		sudo useradd -m -g secondyearappDevs appDev_$i
 	elif [ "$i" -lt 21 ]
 	then
-		useradd -m -g thirdyearappDevs appDev_$i
+		sudo useradd -m -g thirdyearappDevs appDev_$i
 	else
-		useradd -m -g fourthyearappDevs appDev_$i
+		sudo useradd -m -g fourthyearappDevs appDev_$i
 	fi
-	echo password$i | passwd chpasswd
+	echo appDev_$i:password$i | sudo chpasswd
 done
 for i in {01..30} 
 do
 	if [ "$i" -lt 11 ]
 	then
-		useradd -m -g secondyearwebDevs webDev_$i
+		sudo useradd -m -g secondyearwebDevs webDev_$i
 	elif [ "$i" -lt 21 ]
 	then
-		useradd -m -g thirdyearwebDevs webDev_$i
+		sudo useradd -m -g thirdyearwebDevs webDev_$i
 	else
-		useradd -m -g fourthyearwebDevs webDev_$i
+		sudo useradd -m -g fourthyearwebDevs webDev_$i
 	fi
-	echo password$i | chpasswd
+	echo webDev_$i:password$i | sudo chpasswd
 done
-useradd -m Jay_Jay
-echo password | chpasswd
-
+sudo useradd -m Jay_Jay
+echo Jay_Jay:password | sudo chpasswd
